@@ -26,7 +26,9 @@ const Navbar = ({ showToast }) => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-            <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+            <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
             <Link to="/auth">
               <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
                 Sign In
@@ -58,7 +60,9 @@ const Navbar = ({ showToast }) => {
           <div className="px-4 py-4 space-y-4">
             <a href="#features" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>Features</a>
             <a href="#pricing" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>Pricing</a>
-            <a href="#testimonials" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
+            <Link to="/about" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/careers" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>Careers</Link>
+            <Link to="/contact" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             <Link to="/auth" className="w-full block">
               <Button variant="outline" className="w-full text-white border-white">
                 Sign In

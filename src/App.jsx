@@ -7,6 +7,9 @@ import LandingPage from '@/pages/LandingPage';
 import AuthPage from '@/pages/AuthPage';
 import DashboardPage from '@/pages/DashboardPage';
 import PricingPage from '@/pages/PricingPage';
+import AboutPage from '@/pages/AboutPage';
+import CareersPage from '@/pages/CareersPage';
+import ContactPage from '@/pages/ContactPage';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import { AuthProvider } from '@/contexts/AuthContext';
 
@@ -49,6 +52,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage showToast={showToast} />} />
           <Route path="/auth" element={<AuthPage showToast={showToast} />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/contact" element={<ContactPage showToast={showToast} />} />
           <Route 
             path="/dashboard" 
             element={
