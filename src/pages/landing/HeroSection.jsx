@@ -14,13 +14,13 @@ const HeroSection = ({ showToast }) => (
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          <span className="gradient-text">Revolutionary</span>
+          <span className="gradient-text">Supercharge</span>
           <br />
-          SaaS Solutions
+          Your Customer Engagement
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          Transform your business with cutting-edge tools that streamline workflows, 
-          boost productivity, and scale effortlessly with your growth.
+          Integrate powerful CRM with WhatsApp marketing to reach customers where they are. 
+          Automate campaigns, manage leads, and drive growth with our all-in-one solution.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link to="/auth?mode=signup">

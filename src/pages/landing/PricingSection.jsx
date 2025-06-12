@@ -7,50 +7,56 @@ import { Link } from 'react-router-dom';
 
 const pricingPlansData = [
   {
-    name: "Starter",
-    price: "$29",
-    priceAmount: 2900,
+    name: "Basic",
+    price: "₹999",
+    priceAmount: 99900,
     period: "/month",
-    description: "Perfect for small teams getting started",
+    description: "Essential CRM & WhatsApp tools for startups",
     features: [
-      "Up to 5 team members",
-      "10GB storage",
-      "Basic analytics",
+      "Up to 1000 WhatsApp contacts",
+      "Basic CRM features",
+      "Campaign management",
+      "Basic templates",
       "Email support",
-      "Core features"
+      "Message scheduling",
+      "Basic analytics"
     ],
     popular: false
   },
   {
-    name: "Professional",
-    price: "$79",
-    priceAmount: 7900,
+    name: "Growth",
+    price: "₹1,599",
+    priceAmount: 159900,
     period: "/month",
-    description: "Ideal for growing businesses",
+    description: "Perfect for growing businesses",
     features: [
-      "Up to 25 team members",
-      "100GB storage",
-      "Advanced analytics",
+      "Up to 5000 WhatsApp contacts",
+      "Advanced CRM features",
+      "Custom campaign flows",
+      "Advanced templates",
       "Priority support",
-      "All features",
+      "Automated workflows",
+      "Advanced analytics",
       "API access"
     ],
     popular: true
   },
   {
-    name: "Enterprise",
-    price: "$199",
-    priceAmount: 19900,
+    name: "Premium",
+    price: "₹2,999",
+    priceAmount: 299900,
     period: "/month",
-    description: "For large organizations",
+    description: "For large scale operations",
     features: [
-      "Unlimited team members",
-      "1TB storage",
-      "Custom analytics",
-      "24/7 phone support",
-      "All features",
+      "Unlimited WhatsApp contacts",
+      "Enterprise CRM features",
       "Custom integrations",
-      "Dedicated account manager"
+      "Template creation API",
+      "24/7 phone support",
+      "Advanced automation",
+      "Custom analytics",
+      "Dedicated account manager",
+      "Multi-user access"
     ],
     popular: false
   }
@@ -61,10 +67,10 @@ const PricingSection = ({ showToast, handlePurchase }) => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16 scroll-reveal">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-          Simple Pricing
+          CRM & WhatsApp Marketing Solutions
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Choose the perfect plan for your business needs
+          Powerful tools to grow your business with integrated CRM and WhatsApp marketing
         </p>
       </div>
 

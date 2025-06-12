@@ -15,10 +15,10 @@ const CTASection = ({ showToast }) => (
         viewport={{ once: true }}
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-          Ready to Transform Your Business?
+          Ready to Supercharge Your Customer Engagement?
         </h2>
         <p className="text-xl text-gray-300 mb-8">
-          Join thousands of companies already using ZapTool to streamline their operations
+          Join businesses already using our integrated CRM and WhatsApp marketing solution to grow their customer base
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/auth?mode=signup">

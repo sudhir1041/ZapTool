@@ -2,44 +2,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Zap, 
-  Rocket, 
-  Shield, 
+  MessageSquare, 
   Users, 
   BarChart3, 
   Clock, 
+  Bot,
+  Database,
 } from 'lucide-react';
 
 const featuresData = [
   {
-    icon: <Zap className="w-8 h-8" />,
-    title: "Lightning Fast",
-    description: "Experience blazing-fast performance with our optimized infrastructure"
+    icon: <MessageSquare className="w-8 h-8" />,
+    title: "WhatsApp Integration",
+    description: "Seamlessly connect with customers through WhatsApp Business API integration"
   },
   {
-    icon: <Shield className="w-8 h-8" />,
-    title: "Enterprise Security",
-    description: "Bank-grade security with end-to-end encryption and compliance"
+    icon: <Database className="w-8 h-8" />,
+    title: "Advanced CRM",
+    description: "Comprehensive customer management with detailed interaction history"
   },
   {
     icon: <BarChart3 className="w-8 h-8" />,
-    title: "Advanced Analytics",
-    description: "Deep insights and real-time analytics to drive your business forward"
+    title: "Campaign Analytics",
+    description: "Track campaign performance with detailed metrics and insights"
+  },
+  {
+    icon: <Bot className="w-8 h-8" />,
+    title: "Smart Automation",
+    description: "Automate responses and campaigns with intelligent workflows"
   },
   {
     icon: <Users className="w-8 h-8" />,
-    title: "Team Collaboration",
-    description: "Seamless collaboration tools for teams of any size"
+    title: "Lead Management",
+    description: "Efficiently track and nurture leads through your sales pipeline"
   },
   {
     icon: <Clock className="w-8 h-8" />,
-    title: "24/7 Support",
-    description: "Round-the-clock support from our expert team"
-  },
-  {
-    icon: <Rocket className="w-8 h-8" />,
-    title: "Rapid Deployment",
-    description: "Get up and running in minutes, not hours"
+    title: "Scheduled Messaging",
+    description: "Plan and schedule your campaigns for optimal engagement"
   }
 ];
 
@@ -48,10 +48,10 @@ const FeaturesSection = () => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16 scroll-reveal">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-          Powerful Features
+          Powerful CRM & WhatsApp Tools
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Everything you need to supercharge your business operations and drive growth
+          Everything you need to manage customers and drive engagement through WhatsApp
         </p>
       </div>
 

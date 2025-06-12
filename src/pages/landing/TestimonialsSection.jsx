@@ -5,23 +5,23 @@ import { Star } from 'lucide-react';
 
 const testimonialsData = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    content: "ZapTool transformed our workflow completely. We've seen a 300% increase in productivity!",
+    name: "Priya Sharma",
+    role: "Marketing Director, GrowthTech",
+    content: "The WhatsApp integration has revolutionized our customer engagement. We've seen a 200% increase in response rates!",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1575383596664-30f4489f9786"
   },
   {
-    name: "Michael Chen",
-    role: "CTO, InnovateCorp",
-    content: "The best SaaS platform we've ever used. Incredible features and outstanding support.",
+    name: "Rajesh Kumar",
+    role: "Sales Manager, InnovateSales",
+    content: "The CRM integration with WhatsApp has streamlined our entire sales process. Lead conversion is up by 150%.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
   },
   {
-    name: "Emily Rodriguez",
-    role: "Product Manager, GrowthLab",
-    content: "ZapTool's analytics helped us make data-driven decisions that boosted our revenue by 150%.",
+    name: "Anita Patel",
+    role: "CEO, RetailPlus",
+    content: "The automated campaign features and analytics have helped us reach more customers and boost sales significantly.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
   }
@@ -32,10 +32,10 @@ const TestimonialsSection = () => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16 scroll-reveal">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-          What Our Customers Say
+          Success Stories
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Join thousands of satisfied customers who've transformed their business with ZapTool
+          See how businesses are transforming their customer engagement with our CRM and WhatsApp marketing solution
         </p>
       </div>
 
