@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ showToast }) => (
   <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
@@ -29,10 +30,10 @@ const Footer = ({ showToast }) => (
         <div>
           <span className="text-white font-semibold mb-4 block">Company</span>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#" onClick={(e) => { e.preventDefault(); showToast(); }} className="hover:text-white transition-colors">About</a></li>
+            <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
             <li><a href="#" onClick={(e) => { e.preventDefault(); showToast(); }} className="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); showToast(); }} className="hover:text-white transition-colors">Careers</a></li>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); showToast(); }} className="hover:text-white transition-colors">Contact</a></li>
+            <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
         
