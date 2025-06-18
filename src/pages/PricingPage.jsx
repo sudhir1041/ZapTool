@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import PricingSection from '@/pages/landing/PricingSection';
 import { useAuth } from '@/contexts/AuthContext';
-import { supabase } from '@/lib/supabaseClient';
 
 const PricingPage = ({ showToast }) => {
   const navigate = useNavigate();
