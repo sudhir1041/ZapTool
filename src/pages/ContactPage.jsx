@@ -106,7 +106,7 @@ const ContactPage = ({ showToast }) => {
                 <div>
                   <h3 className="text-lg font-medium mb-2">Email</h3>
                   <p className="text-primary">
-                    <a href="mailto:support@zaptool.online">support@zaptool.online</a>
+                    <a href="mailto:support@zaptool.net">support@zaptool.net</a>
                   </p>
                 </div>
                 <div>
