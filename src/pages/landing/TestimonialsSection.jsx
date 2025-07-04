@@ -5,21 +5,21 @@ import { Star } from 'lucide-react';
 
 const testimonialsData = [
   {
-    name: "Priya Sharma",
+    name: "Sudhir Kumar",
     role: "Marketing Director, GrowthTech",
     content: "The WhatsApp integration has revolutionized our customer engagement. We've seen a 200% increase in response rates!",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1575383596664-30f4489f9786"
   },
   {
-    name: "Rajesh Kumar",
+    name: "Sudhir Kumar",
     role: "Sales Manager, InnovateSales",
     content: "The CRM integration with WhatsApp has streamlined our entire sales process. Lead conversion is up by 150%.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
   },
   {
-    name: "Anita Patel",
+    name: "Sudhir Kumar",
     role: "CEO, RetailPlus",
     content: "The automated campaign features and analytics have helped us reach more customers and boost sales significantly.",
     rating: 5,
