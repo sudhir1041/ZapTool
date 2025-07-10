@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { supabase } from '@/lib/supabaseClient';
+import { apiSignup, apiLogin, apiMe } from '@/lib/api';
 
 const AuthContext = createContext();
 
@@ -8,66 +8,44 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSession = async () => {
-      try {
-        const { data: { session } } = await supabase.auth.getSession();
-        setUser(session?.user ?? null);
-      } catch (error) {
-        console.error("Error fetching session:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    fetchSession();
-
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setUser(session?.user ?? null);
-        setLoading(false);
-      }
-    );
-
-    return () => {
-      authListener?.subscription?.unsubscribe();
-    };
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setLoading(false);
+      return;
+    }
+    apiMe(token)
+      .then(setUser)
+      .catch(() => localStorage.removeItem('token'))
+      .finally(() => setLoading(false));
   }, []);
 
   const login = async (email, password) => {
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) {
+    const data = await apiLogin(email, password).catch((err) => {
       setLoading(false);
-      throw error;
-    }
+      throw err;
+    });
+    localStorage.setItem('token', data.token);
+    const userData = await apiMe(data.token);
+    setUser(userData);
     setLoading(false);
   };
 
   const signup = async (email, password) => {
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`
-      }
-    });
-    if (error) {
+    const data = await apiSignup(email, email, password).catch((err) => {
       setLoading(false);
-      throw error;
-    }
+      throw err;
+    });
+    localStorage.setItem('token', data.token);
+    const userData = await apiMe(data.token);
+    setUser(userData);
     setLoading(false);
   };
 
   const logout = async () => {
-    setLoading(true);
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      setLoading(false);
-      throw error;
-    }
+    localStorage.removeItem('token');
     setUser(null);
-    setLoading(false);
   };
 
   const value = {
